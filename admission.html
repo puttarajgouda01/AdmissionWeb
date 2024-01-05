@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<!DOCTYPE javascript>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>College Admission</title>
+
+    <style>
+
+    body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    header, section, footer {
+        margin: 20px;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+    }
+    
+    form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+    
+    .button-container {
+        margin-top: 20px;
+    }
+    
+    button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    button:hover {
+        background-color: #45a049;
+    }
+    
+    footer {
+        margin-top: 50px;
+        text-align: center;
+        color: #555;
+    }
+    </style>
+
+
+
+</head>
+<body>
+
+    <header>
+        <h1>College Admission Portal</h1>
+        <p>Your journey starts here!</p>
+    </header>
+
+    <section id="admissionForm">
+        <h2>Admission Form</h2>
+        <form>
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <label for="course">Select Course:</label>
+            <select id="course" name="course">
+                <option value="computer-science">Computer Science</option>
+                <option value="engineering">Engineering</option>
+                <option value="business">Business</option>
+                <!-- Add more options as needed -->
+            </select>
+
+            <!-- Add more form fields as needed -->
+
+            <div class="button-container">
+                <button type="button" onclick="submitForm()">Submit</button>
+                <button type="button" onclick="clearForm()">Clear</button>
+            </div>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 College Admission. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js">  
+    function submitForm() {
+    // Get form data and perform submission logic
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var dob = document.getElementById("dob").value;
+    var course = document.getElementById("course").value;
+
+    // Perform validation and submission logic as needed
+
+    // For now, just log the data
+    console.log("Name: " + name);
+    console.log("Email: " + email);
+    console.log("Date of Birth: " + dob);
+    console.log("Course: " + course);
+
+    // You can also reset the form after submission if needed
+    document.querySelector('form').reset();
+}
+
+function clearForm() {
+    // Reset all form fields
+    document.querySelector('form').reset();
+}
+</script>
+
+</body>
+</html>
